@@ -46,7 +46,8 @@ class ModalPortal extends Component {
             <StyledModalWrapper {...this.props}>
                 {this.props.children}
             </StyledModalWrapper>,
-            this.portal
+            this.portal,
+            this.portal.lastChild
         );
     }
     render = () => null;
