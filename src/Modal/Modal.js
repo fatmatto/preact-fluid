@@ -38,11 +38,11 @@ class Modal extends Component {
     };
 
     render() {
-        const { style = {}, className } = this.props;
+        const { style = {}, className, id } = this.props;
         const { theme } = this.context;
 
         return this.state.content ? (
-            <ModalPortal>
+            <ModalPortal portalId={id}>
                 <StyledModal style={style} className={className} theme={theme}>
                     {this.state.content}
                 </StyledModal>
